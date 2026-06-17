@@ -1,9 +1,16 @@
 {
   "name": "@flarelink/mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "mcpName": "io.github.flarelink-dev/mcp",
   "description": "MCP server for building on the Flarelink stack — Cloudflare auth (better-auth + KV sessions), D1, and R2 — from inside Cursor, Claude Code, and other AI coding tools.",
   "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flarelink-dev/mcp.git"
+  },
+  "homepage": "https://github.com/flarelink-dev/mcp#readme",
+  "bugs": "https://github.com/flarelink-dev/mcp/issues",
   "bin": {
     "flarelink-mcp": "dist/index.js"
   },

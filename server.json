@@ -1,0 +1,31 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.flarelink-dev/mcp",
+  "description": "Build on the Flarelink stack — Cloudflare auth, D1, and R2 — from your AI coding tools.",
+  "title": "Flarelink",
+  "websiteUrl": "https://flarelink.dev",
+  "repository": {
+    "url": "https://github.com/flarelink-dev/mcp",
+    "source": "github"
+  },
+  "version": "0.1.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@flarelink/mcp",
+      "version": "0.1.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "FLARELINK_API_KEY",
+          "description": "Optional. Personal API key from dash.flarelink.dev → API keys. Enables the project-management tools; the knowledge & scaffolding tools work without it.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
