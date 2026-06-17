@@ -1,0 +1,9 @@
+node_modules
+dist
+.git
+*.log
+*.pem
+key.pem
+.DS_Store
+.vscode
+.idea
