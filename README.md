@@ -21,11 +21,17 @@ claude mcp add flarelink -- npx -y @flarelink/mcp
   "mcpServers": {
     "flarelink": {
       "command": "npx",
-      "args": ["-y", "@flarelink/mcp"]
+      "args": ["-y", "@flarelink/mcp"],
+      "env": { "FLARELINK_API_KEY": "flk_…" }
     }
   }
 }
 ```
+
+The `FLARELINK_API_KEY` is **optional**. Without it you still get all the
+knowledge + scaffolding tools. With it, the **management tools** (below) can
+drive your actual Flarelink projects. Mint a key at
+[dash.flarelink.dev → API keys](https://dash.flarelink.dev).
 
 ## Tools
 
@@ -40,11 +46,19 @@ claude mcp add flarelink -- npx -y @flarelink/mcp
 
 It also exposes the stack guide as a resource (`flarelink://stack-guide`) you can attach as context.
 
-## What's next
+### Management tools (need `FLARELINK_API_KEY`)
 
-This first release is **knowledge + scaffolding** — it needs no Flarelink account and changes nothing in your project on its own; the agent acts on what it returns.
+Drive your actual Flarelink projects from the editor. These route through the Flarelink dashboard API and act exactly as you would in the UI.
 
-A follow-up release adds **management tools** (authenticated with a Flarelink API key): list/provision projects, query a project's D1, manage R2, and inspect auth users — so you can drive your Flarelink backend from the same chat.
+| Tool | What it does |
+| --- | --- |
+| `flarelink_whoami` | Verify the key; show the user + active connection/project. |
+| `flarelink_list_projects` | List projects on the active Cloudflare connection. |
+| `flarelink_list_databases` | List the project's D1 databases. |
+| `flarelink_query_database` | Run a (parameterized) SQL statement against a project D1. |
+| `flarelink_list_buckets` | List the project's R2 buckets. |
+
+Without a key they return a clear "set `FLARELINK_API_KEY`" message. The key has the same access as your Flarelink login — treat it like a password.
 
 ## License
 

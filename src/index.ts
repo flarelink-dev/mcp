@@ -9,6 +9,7 @@ import {
   SDK_REFERENCE,
   COST_PATTERNS,
 } from './content.js';
+import { registerManagementTools } from './management.js';
 
 const text = (t: string) => ({ content: [{ type: 'text' as const, text: t }] });
 
@@ -150,6 +151,11 @@ server.registerTool(
     return text(head + COST_PATTERNS);
   },
 );
+
+// --- management tools (authenticated with FLARELINK_API_KEY) ----------------
+// Registered unconditionally — they return a clear "set FLARELINK_API_KEY"
+// message when no key is configured, so the agent can guide the user.
+registerManagementTools(server);
 
 // --- start ------------------------------------------------------------------
 
