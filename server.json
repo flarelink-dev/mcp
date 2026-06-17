@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.flarelink-dev/mcp",
+  "name": "dev.flarelink/mcp",
   "description": "Build on the Flarelink stack — Cloudflare auth, D1, and R2 — from your AI coding tools.",
   "title": "Flarelink",
   "websiteUrl": "https://flarelink.dev",
@@ -8,13 +8,13 @@
     "url": "https://github.com/flarelink-dev/mcp",
     "source": "github"
   },
-  "version": "0.1.1",
+  "version": "0.1.2",
   "packages": [
     {
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
       "identifier": "@flarelink/mcp",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "transport": {
         "type": "stdio"
       },

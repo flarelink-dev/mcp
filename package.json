@@ -1,7 +1,7 @@
 {
   "name": "@flarelink/mcp",
-  "version": "0.1.1",
-  "mcpName": "io.github.flarelink-dev/mcp",
+  "version": "0.1.2",
+  "mcpName": "dev.flarelink/mcp",
   "description": "MCP server for building on the Flarelink stack — Cloudflare auth (better-auth + KV sessions), D1, and R2 — from inside Cursor, Claude Code, and other AI coding tools.",
   "license": "MIT",
   "type": "module",

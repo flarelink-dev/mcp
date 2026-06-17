@@ -13,7 +13,7 @@ import { registerManagementTools } from './management.js';
 
 const text = (t: string) => ({ content: [{ type: 'text' as const, text: t }] });
 
-const server = new McpServer({ name: 'flarelink', version: '0.1.1' });
+const server = new McpServer({ name: 'flarelink', version: '0.1.2' });
 
 // --- resources (attachable context) ----------------------------------------
 
