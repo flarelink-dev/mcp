@@ -1,0 +1,44 @@
+{
+  "name": "@flarelink/mcp",
+  "version": "0.1.0",
+  "description": "MCP server for building on the Flarelink stack — Cloudflare auth (better-auth + KV sessions), D1, and R2 — from inside Cursor, Claude Code, and other AI coding tools.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "flarelink-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "flarelink",
+    "cloudflare",
+    "better-auth",
+    "d1",
+    "r2",
+    "ai"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.21",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0"
+  }
+}
